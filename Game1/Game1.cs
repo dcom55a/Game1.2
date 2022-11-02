@@ -29,8 +29,6 @@ namespace Game1
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-            
             _physicsHandler = new PhysicsHandler(GraphicsDevice.PresentationParameters.Bounds.Width, GraphicsDevice.PresentationParameters.Bounds.Height);
             ObjectList = new List<PhyObject>();
             Hitbox PlayerHitbox = new Hitbox("circle", 10f);
@@ -47,8 +45,7 @@ namespace Game1
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             sprBall = this.Content.Load<Texture2D>("Spr_Ball");
             font = this.Content.Load<SpriteFont>("File");
-           
-            // TODO: use this.Content to load your game content here
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -63,14 +60,12 @@ namespace Game1
             //calculate Physics
             _physicsHandler.UpdatePhysics(gameTime,swing);
             
-
             base.Update(gameTime); 
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.LawnGreen);
-
 
             SpriteBatch spriteBatch = new SpriteBatch(GraphicsDevice);
             spriteBatch.Begin();

@@ -162,11 +162,8 @@ namespace Game1
                     obj.Position += obj.Velocity * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                 }
-
-               
             }
-            return phyModel.ObjList;
-            
+            return phyModel.ObjList;   
         }
 
         public List<(PhyObject,PhyObject)> GetCollisions()
@@ -200,16 +197,11 @@ namespace Game1
                                 returnList.Add(CollisionPair);
                             }
                         }
-
-
-
-
                     }
                 }
             }
             return returnList;
         }
-
         public void HandleCollisions(List<(PhyObject,PhyObject)> CollisionList)
         {
             foreach ((PhyObject,PhyObject) Collision in CollisionList)
@@ -326,7 +318,5 @@ namespace Game1
 
             }
         }
-       
-
     }
 }
